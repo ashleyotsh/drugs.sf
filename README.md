@@ -3,13 +3,13 @@
 Static website (no build step). Pages:
 
 - `index.html` – landing page
-- `map.html` – opioid services map (Leaflet + OpenStreetMap/CARTO tiles)
+- `map.html` – opioid services map
 
 ## Updating the map
 Edit `data/services.js`. Each location needs `name`, `address`, `services` (a list; use `[]` if unknown), `lat`, and `lng`.
 
 ## Running locally
-Open `index.html` in a browser, or run `python3 -m http.server` in this folder and visit http://localhost:8000.
+Open `index.html` in a browser.
 
 ## Publishing with GitHub Pages
 1. Push this folder's contents to the root of a GitHub repository.
