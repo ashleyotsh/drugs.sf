@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opioid services map | Opioids in San Francisco</title>
+  <meta name="description" content="Map of opioid treatment and harm reduction services in San Francisco, by location, name, and service type.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="map-page">
+  <a class="skip-link" href="#search">Skip to search</a>
+
+  <header class="site-header">
+    <a class="site-title" href="index.html">Opioids in San Francisco</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="map.html" aria-current="page">Services map</a>
+    </nav>
+  </header>
+
+  <div class="map-layout">
+    <aside class="panel" aria-label="Search and results">
+      <div class="panel-top">
+        <h1>Services map</h1>
+        <p>Select a location to see its address and services. Call ahead to confirm hours.</p>
+        <label for="search">Search by name or address</label>
+        <input id="search" type="search" placeholder="For example, Market Street" autocomplete="off">
+        <fieldset>
+          <legend>Service type</legend>
+          <div class="chips" id="chips"></div>
+        </fieldset>
+      </div>
+      <div class="result-count" id="count" aria-live="polite"></div>
+      <ul class="results" id="results"></ul>
+    </aside>
+
+    <div id="map" role="region" aria-label="Map of services"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="data/services.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
